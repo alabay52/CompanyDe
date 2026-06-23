@@ -38,6 +38,8 @@ namespace CompanyDe.Views.Windows
                         {
                             AdminWndow administratorWindow = new AdminWndow();
                             administratorWindow.Show();
+                            MessageBox.Show("Вы успешно авторизовались.", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+
                         }
                         else
                         {
