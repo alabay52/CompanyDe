@@ -1,0 +1,34 @@
+﻿<Window x:Class="CompanyDe.Views.Windows.AdminWndow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CompanyDe.Views.Windows"
+        mc:Ignorable="d"
+       Title="Окно администратора" Height="320" Width="680" WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <ListView Name="UsersLv" Grid.Row="2" Grid.ColumnSpan="3" SelectionChanged="UsersLv_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ФИО" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Телефон" DisplayMemberBinding="{Binding Phone}" />
+                    <GridViewColumn Header="ИНН" DisplayMemberBinding="{Binding INN}" />
+                    <GridViewColumn Header="Адресс" DisplayMemberBinding="{Binding Addres}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Name="AddBtn" Grid.Column="0" Content="Добавить" Click="AddBtn_Click" Grid.Row="0" Height="30" Width="120"/>
+        <Button Name="EditBtn" Content="Редактировать" Grid.Column="1" Click="EditBtn_Click" Grid.Row="0" Height="30" Width="120"/>
+        
+    </Grid>
+</Window>
