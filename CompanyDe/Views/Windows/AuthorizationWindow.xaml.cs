@@ -36,13 +36,15 @@ namespace CompanyDe.Views.Windows
                         // Авторизация
                         if (App.currentUser.RoleId == 1)
                         {
+                            MessageBox.Show("Вы успешно авторизовались.", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
                             AdminWndow administratorWindow = new AdminWndow();
                             administratorWindow.Show();
-                            MessageBox.Show("Вы успешно авторизовались.", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+
 
                         }
                         else
                         {
+                            MessageBox.Show("Вы успешно авторизовались.", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
                             UserWindow userWindow = new UserWindow();
                             userWindow.Show();
                         }
